@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.countries {
+    background-color: #f98989;
+    display: flex;
+}
+
+.countriest_list {
+    text-decoration: none;
+    padding: 10px 15px 10px 20px;
+    letter-spacing: 1px;
+    color: black;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 25px;
+}
+
+.countriest_list:hover {
+    background-color: #e85555;
+}
+
+.countriest_list.active {
+    background-color: #d32e2e;
+    color: white;
+}
+
+.info {
+    letter-spacing: 1px;
+    line-height: 22px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.flag {
+    width: 200px;
+    padding: 10px 10px 10px 15px;
+}
+
+.canada_cities {
+    font-size: 18px;
+}
+
+.list {
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.cities_list {
+    padding: 3px;
+    letter-spacing: 0.5px;
+}
