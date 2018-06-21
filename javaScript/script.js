@@ -17,6 +17,16 @@ function ready() {
                 };
 
                 currentLink.classList.add('active');
+            //links
+                
+                var tabId = currentLink.getAttribute('data-id');
+                var activeTab = document.querySelector('.tub-info.active');
+                if(activeLink) {
+                    activeTab.classList.remove('active');
+                };
+
+                var currentTab = document.querySelector(`.tub-info[data-id="${tabId}"]`);
+                currentTab.classList.add('active');
             }
         });
     }

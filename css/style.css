@@ -53,3 +53,11 @@
     padding: 3px;
     letter-spacing: 0.5px;
 }
+
+.tub-info {
+    display: none;
+}
+
+.tub-info.active {
+    display: block;
+}
