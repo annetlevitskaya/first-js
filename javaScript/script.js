@@ -30,5 +30,10 @@ function ready() {
             }
         });
     }
+    var bottomNext = document.querySelector('.next');
+        bottomNext.addEventListener('click', function (){
+            var activeLink = document.querySelector('.active.countriest_list');
+            console.log(activeLink);
+        });
 }
 document.addEventListener("DOMContentLoaded", ready);
