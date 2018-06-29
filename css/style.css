@@ -9,7 +9,7 @@
     display: flex;
 }
 
-.countriest_list {
+.countries__item {
     text-decoration: none;
     padding: 10px 15px 10px 20px;
     letter-spacing: 1px;
@@ -19,11 +19,11 @@
     font-size: 25px;
 }
 
-.countriest_list:hover {
+.countries__item:hover {
     background-color: #e85555;
 }
 
-.countriest_list.active {
+.countries__item.active {
     background-color: #d32e2e;
     color: white;
 }
@@ -54,11 +54,11 @@
     letter-spacing: 0.5px;
 }
 
-.tub-info {
+.tab-info {
     display: none;
 }
 
-.tub-info.active {
+.tab-info.active {
     display: block;
 }
 

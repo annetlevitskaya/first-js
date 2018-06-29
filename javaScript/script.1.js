@@ -40,7 +40,19 @@ function ready() {
 
         if (activeLinkDataId < linksCount) {
             var nextDataId = parseInt(activeLinkDataId, 10) + 1;
-            setTabByDataId(nextDataId)
+
+            var nextLink = document.querySelector(
+                `.countries__item[data-id="${nextDataId}"]`
+            );
+            activeLink.classList.remove('active');
+            nextLink.classList.add('active');
+
+            var activeInfo = document.querySelector('.active.tab-info');
+            var nextInfo = document.querySelector(
+                `.tab-info[data-id="${nextDataId}"]`
+            );
+            activeInfo.classList.remove('active');
+            nextInfo.classList.add('active');
         }
     });
 
@@ -51,28 +63,22 @@ function ready() {
         var activeLinkDataId = activeLink.getAttribute('data-id');
 
         if (activeLinkDataId > 1) {
-            var prevDataId = parseInt(activeLinkDataId, 10) - 1;
-            setTabByDataId(prevDataId);
+            var previousDataId = parseInt(activeLinkDataId, 10) - 1;
+
+            var previousLink = document.querySelector(
+                `.countries__item[data-id="${previousDataId}"]`
+            );
+            activeLink.classList.remove('active');
+            previousLink.classList.add('active');
+
+            var activeInfo = document.querySelector('.tab-info.active');
+            var previousInfo = document.querySelector(
+                `.tab-info[data-id="${previousDataId}"]`
+            );
+            activeInfo.classList.remove('active');
+            previousInfo.classList.add('active');
         }
     });
-}
-
-function setTabByDataId(dataId) {
-    var activeLink = document.querySelector('.active.countries__item');
-    var activeInfo = document.querySelector('.tab-info.active');
-
-    var nextLink = document.querySelector(
-        `.countries__item[data-id="${dataId}"]`
-    );
-    var nextInfo = document.querySelector(
-        `.tab-info[data-id="${dataId}"]`
-    );
-    
-    activeLink.classList.remove('active');
-    activeInfo.classList.remove('active');
-
-    nextLink.classList.add('active');
-    nextInfo.classList.add('active');
 }
 
 document.addEventListener("DOMContentLoaded", ready);
