@@ -79,6 +79,8 @@ function ready() {
             previousInfo.classList.add('active');
         }
     });
+
+    //$('.slider-photo').slick();
 }
 
 document.addEventListener("DOMContentLoaded", ready);
